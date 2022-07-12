@@ -1,1 +1,18 @@
-asdsfasdf
+image: python:latest
+
+job0:
+  stage: build
+  script:
+    - echo "build phase..."
+    - uname -a
+
+job1:
+  stage: test
+  script:
+    - echo "test phase..."
+    - python helloworld.py
+
+job2:
+  stage: deploy
+  script:
+    - echo "deploy phase..."
